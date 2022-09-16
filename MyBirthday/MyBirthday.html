@@ -68,7 +68,7 @@
                         <img src="./Anh1.jpg" alt="" class="avatar__img" onclick="showMessage()" />
                     </div>
                     <!-- 4.Name -->
-                    <h1 onclick="showMessage()" class="avatar__title">Hồ Ngọc Ánh</h1>
+                    <h1  class="avatar__title">Hồ Ngọc Ánh</h1>
                 </div>
                 
                 
@@ -76,6 +76,25 @@
                 <!-- <audio id="player" autoplay loop>
                     <source src="./music.mp3" type="audio/mp3">
                 </audio> -->
+            </div>
+            <div class="modal " >
+                <div class="modal-container">
+                    <header class="modal-header">
+                        Điều ước nho nhỏ của cậu 
+                    </header>
+                    <div class="modal-body">
+                        <textarea name="" id="" cols="30" rows="10" class="modal-input"  placeholder="Cậu có thể nhập điều ước của cậu ở đây!"></textarea>
+                        <button id="send-messages">
+                            Gửi❤️️
+                        </button>
+                    </div>
+                    <footer class="modal-footer">
+                        <button class="modal-close">Close</button>
+                        <p class="modal-contact">
+                            <a href="https://www.facebook.com/profile.php?id=100022796783515">Contact me</a>
+                        </p>
+                    </footer>
+                </div>
             </div>
         </div>
         <script>
@@ -92,6 +111,25 @@
                     },
                 });
             }
+        </script>
+        <script>
+            const name  = document.querySelector('.avatar__title')
+            const modal = document.querySelector('.modal')
+            const closeModal = document.querySelector('.modal-close')
+            const sendWish = document.getElementById('send-messages')
+            function showWishModal() {
+                modal.classList.add('open')
+            }
+            function closeWishModal() {
+                modal.classList.remove('open')
+            }
+            function sendWishMessage() {
+                alert("Những điều ước của cậu đã được gửi đi, cậu sẽ nhận lại được những tín hiệu tích cực từ vũ trụ trong cuộc sống <3 ")
+                modal.classList.remove('open')
+            }
+            name.addEventListener('click', showWishModal)
+            closeModal.addEventListener('click', closeWishModal)
+            sendWish.addEventListener('click',sendWishMessage)
         </script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
